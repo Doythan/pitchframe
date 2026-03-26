@@ -99,3 +99,16 @@ textarea::placeholder {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 2px;
 }
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+  .hidden.md\:block {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hidden.md\:block {
+    display: block !important;
+  }
+}
