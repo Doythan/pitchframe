@@ -67,40 +67,41 @@ function PlayerDot({ player, onPointerDown }: {
   return (
     <div
       className="player-marker"
-      style={{ left: `${player.x}%`, top: `${player.y}%` }}
+      style={{ left: `${player.x}%`, top: `${player.y}%`, display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       onPointerDown={onPointerDown}
     >
       <div style={{
-        width: 30,
-        height: 30,
+        width: 42,
+        height: 42,
         borderRadius: '50%',
         background: 'rgba(8,9,12,0.75)',
-        border: '1.5px solid rgba(255,255,255,0.82)',
+        border: '2px solid rgba(255,255,255,0.88)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.6)',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.7)',
         backdropFilter: 'blur(2px)',
+        flexShrink: 0,
       }}>
         <span style={{
-          fontSize: 7.5,
-          fontWeight: 700,
-          color: 'rgba(255,255,255,0.7)',
-          letterSpacing: '0.3px',
+          fontSize: 9,
+          fontWeight: 800,
+          color: 'rgba(255,255,255,0.85)',
+          letterSpacing: '0.4px',
           textTransform: 'uppercase',
         }}>
           {player.role}
         </span>
       </div>
       <div style={{
-        marginTop: 3,
+        marginTop: 5,
         textAlign: 'center',
-        fontSize: 9.5,
-        fontWeight: 700,
+        fontSize: 11,
+        fontWeight: 800,
         color: '#fff',
-        textShadow: '0 1px 4px rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.8)',
+        textShadow: '0 2px 6px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,0.9)',
         whiteSpace: 'nowrap',
-        letterSpacing: '0.6px',
+        letterSpacing: '0.8px',
         textTransform: 'uppercase',
       }}>
         {player.name}
