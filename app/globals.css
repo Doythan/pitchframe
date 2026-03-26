@@ -17,6 +17,7 @@ body {
   position: relative;
   width: 100%;
   aspect-ratio: 68 / 105;
+  touch-action: none;
 }
 
 .player-marker {

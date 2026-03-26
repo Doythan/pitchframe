@@ -117,6 +117,7 @@ export default function Pitch() {
 
   const onPointerMove = useCallback((e: React.PointerEvent) => {
     if (!dragging.current || !containerRef.current) return;
+    e.preventDefault();
     const rect = containerRef.current.getBoundingClientRect();
     const x = Math.max(3, Math.min(97, ((e.clientX - rect.left) / rect.width) * 100));
     const y = Math.max(3, Math.min(97, ((e.clientY - rect.top) / rect.height) * 100));
